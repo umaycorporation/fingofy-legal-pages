@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fingofy - Hesap Silme Bilgileri</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .logo {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #f39c12;
+        }
+        
+        .warning h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .section {
+            margin: 30px 0;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .steps {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin: 15px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .step-number {
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .data-list {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .data-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .data-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e9ecef;
+            display: flex;
+            align-items: center;
+        }
+        
+        .data-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .data-list li::before {
+            content: "🗑️";
+            margin-right: 10px;
+        }
+        
+        .contact {
+            background: #e3f2fd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .contact h3 {
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+        
+        .contact a {
+            color: #1976d2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        
+        .app-link {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .app-link a {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        
+        .app-link a:hover {
+            background: #5a6fd8;
+        }
+        
+        .language-switch {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .language-switch a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        
+        .language-switch a:hover {
+            background: #f0f0f0;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+            
+            .logo {
+                font-size: 2em;
+            }
+            
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .step-number {
+                margin: 0 auto 10px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">Fingofy</div>
+            <div class="subtitle">Hesap Silme Bilgileri</div>
+        </div>
+        
+        <div class="language-switch">
+            <a href="index.html">🇹🇷 Türkçe</a>
+            <a href="en.html">🇺🇸 English</a>
+        </div>
+        
+        <div class="warning">
+            <h3>⚠️ Önemli Uyarı</h3>
+            <p>Hesap silme işlemi <strong>geri alınamaz</strong>. Bu işlem tamamlandıktan sonra tüm verileriniz kalıcı olarak silinecek ve hesabınıza tekrar erişim sağlayamayacaksınız.</p>
+        </div>
+        
+        <div class="section">
+            <h2>📱 Hesap Silme Adımları</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <strong>Fingofy uygulamasını açın</strong>
+                        <p>Mobil cihazınızda Fingofy uygulamasını başlatın</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <strong>Profil sekmesine gidin</strong>
+                        <p>Ana ekranda alt kısımdaki "Profil" sekmesine dokunun</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <strong>"Hesabımı Sil" butonuna tıklayın</strong>
+                        <p>Profil menüsünde "Hesabımı Sil" seçeneğini bulun ve dokunun</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <strong>Onaylayın</strong>
+                        <p>Uyarı mesajını okuyun ve "Evet, Hesabımı Sil" butonuna tıklayarak işlemi onaylayın</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🗑️ Silinecek Veriler</h2>
+            <div class="data-list">
+                <p>Aşağıdaki tüm verileriniz kalıcı olarak silinecektir:</p>
+                <ul>
+                    <li>Kullanıcı profili ve kişisel bilgileriniz</li>
+                    <li>Tüm hesaplarınız ve bakiye bilgileri</li>
+                    <li>Gelir ve gider işlemleriniz</li>
+                    <li>Bütçe planlarınız ve kategorileriniz</li>
+                    <li>Finansal hedefleriniz</li>
+                    <li>Bildirim tercihleriniz</li>
+                    <li>Uygulama ayarlarınız</li>
+                    <li>Yedekleme verileriniz</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📋 Önemli Notlar</h2>
+            <div class="data-list">
+                <ul>
+                    <li>Hesap silme işlemi geri alınamaz</li>
+                    <li>Silinen veriler kurtarılamaz</li>
+                    <li>Hesap silindikten sonra aynı e-posta ile tekrar kayıt olabilirsiniz</li>
+                    <li>Uygulama mağazasından uygulamayı kaldırmak hesabınızı silmez</li>
+                    <li>Hesap silme işlemi 24 saat içinde tamamlanır</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="contact">
+            <h3>❓ Yardıma mı İhtiyacınız Var?</h3>
+            <p>Hesap silme işlemi ile ilgili sorularınız için bizimle iletişime geçin:</p>
+            <p><strong>E-posta:</strong> <a href="mailto:support@umaycorporation.com">support@umaycorporation.com</a></p>
+        </div>
+        
+        <div class="app-link">
+            <a href="https://play.google.com/store/apps/details?id=com.umaycorporation.fingofy" target="_blank">
+                📱 Fingofy'ı İndir
+            </a>
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px; color: #666; font-size: 0.9em;">
+            <p>&copy; 2024 Umay Corporation. Tüm hakları saklıdır.</p>
+        </div>
+    </div>
+</body>
+</html>

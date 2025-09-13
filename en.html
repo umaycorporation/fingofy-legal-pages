@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fingofy - Account Deletion Information</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .logo {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #f39c12;
+        }
+        
+        .warning h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .section {
+            margin: 30px 0;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .steps {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin: 15px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .step-number {
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .data-list {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .data-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .data-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e9ecef;
+            display: flex;
+            align-items: center;
+        }
+        
+        .data-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .data-list li::before {
+            content: "🗑️";
+            margin-right: 10px;
+        }
+        
+        .contact {
+            background: #e3f2fd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .contact h3 {
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+        
+        .contact a {
+            color: #1976d2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        
+        .app-link {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .app-link a {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        
+        .app-link a:hover {
+            background: #5a6fd8;
+        }
+        
+        .language-switch {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .language-switch a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        
+        .language-switch a:hover {
+            background: #f0f0f0;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+            
+            .logo {
+                font-size: 2em;
+            }
+            
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .step-number {
+                margin: 0 auto 10px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">Fingofy</div>
+            <div class="subtitle">Account Deletion Information</div>
+        </div>
+        
+        <div class="language-switch">
+            <a href="index.html">🇹🇷 Türkçe</a>
+            <a href="en.html">🇺🇸 English</a>
+        </div>
+        
+        <div class="warning">
+            <h3>⚠️ Important Warning</h3>
+            <p>Account deletion is <strong>irreversible</strong>. After this process is completed, all your data will be permanently deleted and you will not be able to access your account again.</p>
+        </div>
+        
+        <div class="section">
+            <h2>📱 Account Deletion Steps</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <strong>Open the Fingofy app</strong>
+                        <p>Launch the Fingofy app on your mobile device</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <strong>Go to Profile tab</strong>
+                        <p>Tap on the "Profile" tab at the bottom of the main screen</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <strong>Tap "Delete My Account" button</strong>
+                        <p>Find and tap the "Delete My Account" option in the profile menu</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <strong>Confirm the action</strong>
+                        <p>Read the warning message and tap "Yes, Delete My Account" to confirm the action</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🗑️ Data That Will Be Deleted</h2>
+            <div class="data-list">
+                <p>The following data will be permanently deleted:</p>
+                <ul>
+                    <li>User profile and personal information</li>
+                    <li>All your accounts and balance information</li>
+                    <li>Income and expense transactions</li>
+                    <li>Budget plans and categories</li>
+                    <li>Financial goals</li>
+                    <li>Notification preferences</li>
+                    <li>App settings</li>
+                    <li>Backup data</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📋 Important Notes</h2>
+            <div class="data-list">
+                <ul>
+                    <li>Account deletion cannot be undone</li>
+                    <li>Deleted data cannot be recovered</li>
+                    <li>You can register again with the same email after account deletion</li>
+                    <li>Uninstalling the app from the app store does not delete your account</li>
+                    <li>Account deletion process is completed within 24 hours</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="contact">
+            <h3>❓ Need Help?</h3>
+            <p>If you have questions about account deletion, please contact us:</p>
+            <p><strong>Email:</strong> <a href="mailto:support@umaycorporation.com">support@umaycorporation.com</a></p>
+        </div>
+        
+        <div class="app-link">
+            <a href="https://play.google.com/store/apps/details?id=com.umaycorporation.fingofy" target="_blank">
+                📱 Download Fingofy
+            </a>
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px; color: #666; font-size: 0.9em;">
+            <p>&copy; 2024 Umay Corporation. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
