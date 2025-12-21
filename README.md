@@ -18,4 +18,4 @@ These pages provide detailed information about account deletion process for Fing
 
 ## Contact
 
-For questions about account deletion, contact: support@umaycorporation.com
+For questions about account deletion, contact: umaycorporation@gmail.com
