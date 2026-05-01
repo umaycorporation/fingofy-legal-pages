@@ -1,21 +1,24 @@
-# Fingofy Legal Pages
+# Fingofy Privacy Policy
 
-This repository contains the public legal pages for the Fingofy mobile application.
+Bu klasör Fingofy uygulamasının gizlilik politikasını içerir.
 
-## Pages
+## Dosyalar
 
-- **index.html** - Turkish account deletion information
-- **en.html** - English account deletion information
+- `index.html` - Türkçe gizlilik politikası
+- `en.html` - İngilizce gizlilik politikası
+- `app-ads.txt` - AdMob app-ads doğrulama dosyası
 
-## Purpose
+## GitHub Pages
 
-These pages provide detailed information about account deletion process for Fingofy users, as required by Google Play Console policies.
+Bu dosyalar GitHub Pages üzerinden yayınlanır:
+- Türkçe: https://umaycorporation.github.io/fingofy-legal-pages/
+- İngilizce: https://umaycorporation.github.io/fingofy-legal-pages/en.html
 
-## URLs
+## Güncelleme
 
-- Turkish: https://umaycorporation.github.io/fingofy-legal-pages/
-- English: https://umaycorporation.github.io/fingofy-legal-pages/en.html
+Politika güncellendiğinde bu dosyaları da güncelleyin ve GitHub'a push edin.
 
-## Contact
+## AdMob app-ads.txt
 
-For questions about account deletion, contact: umaycorporation@gmail.com
+`app-ads.txt` dosyası `docs/` altında tutulur ve GitHub Actions ile public Pages reposunun kök dizinine deploy edilir.
+Bu repo `fingofy-legal-pages` olarak yayınlandığında doğrulama URL'i: `https://umaycorporation.github.io/fingofy-legal-pages/app-ads.txt`

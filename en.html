@@ -3,316 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fingofy - Account Deletion Information</title>
+    <title>Fingofy - Privacy Policy</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-
-        .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+            color: #333;
+            background-color: #f8fafc;
+        }
+        .container {
             background: white;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            padding: 40px;
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
-        .header {
+        h1 {
+            color: #4F46E5;
+            font-size: 2.2em;
+            margin-bottom: 20px;
             text-align: center;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #f0f0f0;
         }
-
-        .logo {
-            font-size: 2.5em;
-            font-weight: bold;
-            color: #667eea;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            color: #666;
-            font-size: 1.1em;
-        }
-
-        .warning {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 20px 0;
-            border-left: 4px solid #f39c12;
-        }
-
-        .warning h3 {
-            color: #856404;
-            margin-bottom: 10px;
-        }
-
-        .section {
-            margin: 30px 0;
-        }
-
-        .section h2 {
-            color: #667eea;
+        h2 {
+            color: #1F2937;
+            font-size: 1.4em;
+            margin-top: 30px;
             margin-bottom: 15px;
-            font-size: 1.5em;
+            border-bottom: 2px solid #E5E7EB;
+            padding-bottom: 10px;
         }
-
-        .steps {
-            background: #f8f9fa;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-
-        .step {
-            display: flex;
-            align-items: flex-start;
-            margin: 15px 0;
-            padding: 10px;
-            background: white;
-            border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-
-        .step-number {
-            background: #667eea;
-            color: white;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            margin-right: 15px;
-            flex-shrink: 0;
-        }
-
-        .step-content {
-            flex: 1;
-        }
-
-        .data-list {
-            background: #f8f9fa;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-
-        .data-list ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .data-list li {
-            padding: 8px 0;
-            border-bottom: 1px solid #e9ecef;
-            display: flex;
-            align-items: center;
-        }
-
-        .data-list li:last-child {
-            border-bottom: none;
-        }
-
-        .data-list li::before {
-            content: "🗑️";
-            margin-right: 10px;
-        }
-
-        .contact {
-            background: #e3f2fd;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .contact h3 {
-            color: #1976d2;
+        h3 {
+            color: #374151;
+            font-size: 1.2em;
+            margin-top: 20px;
             margin-bottom: 10px;
         }
-
-        .contact a {
-            color: #1976d2;
-            text-decoration: none;
-            font-weight: bold;
+        p, li {
+            margin-bottom: 10px;
+            color: #4B5563;
         }
-
-        .contact a:hover {
-            text-decoration: underline;
-        }
-
-        .app-link {
-            text-align: center;
-            margin: 30px 0;
-        }
-
-        .app-link a {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-
-        .app-link a:hover {
-            background: #5a6fd8;
-        }
-
-        .language-switch {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .language-switch a {
-            color: #667eea;
-            text-decoration: none;
-            margin: 0 10px;
-            padding: 5px 10px;
-            border-radius: 4px;
-            transition: background 0.3s;
-        }
-
-        .language-switch a:hover {
-            background: #f0f0f0;
-        }
-
+        ul { padding-left: 25px; }
+        .update-date { text-align: center; color: #6B7280; font-style: italic; margin-bottom: 30px; }
+        .contact { background: #EFF6FF; padding: 20px; border-radius: 8px; border-left: 4px solid #4F46E5; margin-top: 30px; }
+        .app-info { background: #F0FDF4; padding: 15px; border-radius: 8px; text-align: center; font-weight: 600; color: #059669; margin-bottom: 30px; }
+        .language-switch { text-align: center; margin-bottom: 20px; }
+        .language-switch a { color: #4F46E5; text-decoration: none; margin: 0 10px; }
         @media (max-width: 600px) {
-            .container {
-                margin: 10px;
-                padding: 15px;
-            }
-
-            .logo {
-                font-size: 2em;
-            }
-
-            .step {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .step-number {
-                margin: 0 auto 10px auto;
-            }
+            body { padding: 10px; }
+            .container { padding: 20px; }
+            h1 { font-size: 1.8em; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <div class="logo">Fingofy</div>
-            <div class="subtitle">Account Deletion Information</div>
-        </div>
-
         <div class="language-switch">
-            <a href="index.html">🇹🇷 Türkçe</a>
-            <a href="en.html">🇺🇸 English</a>
+            <a href="index.html">Türkçe</a> | <a href="en.html">English</a>
         </div>
 
-        <div class="warning">
-            <h3>⚠️ Important Warning</h3>
-            <p>Account deletion is <strong>irreversible</strong>. After this process is completed, all your data will be permanently deleted and you will not be able to access your account again.</p>
+        <h1>Fingofy - Privacy Policy</h1>
+        <p class="update-date"><strong>Last Updated: September 02, 2025</strong></p>
+
+        <div class="app-info">
+            The app works offline/online together for payment plans, budget, goals and analytics.
         </div>
 
-        <div class="section">
-            <h2>📱 Account Deletion Steps</h2>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <strong>Open the Fingofy app</strong>
-                        <p>Launch the Fingofy app on your mobile device</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <strong>Go to Profile tab</strong>
-                        <p>Tap on the "Profile" tab at the bottom of the main screen</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <strong>Tap "Delete My Account" button</strong>
-                        <p>Find and tap the "Delete My Account" option in the profile menu</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <strong>Confirm the action</strong>
-                        <p>Read the warning message and tap "Yes, Delete My Account" to confirm the action</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <h2>Overview</h2>
+        <p>Fingofy helps users manage their finances. This policy explains what data we collect, how we use it, and your rights.</p>
 
-        <div class="section">
-            <h2>🗑️ Data That Will Be Deleted</h2>
-            <div class="data-list">
-                <p>The following data will be permanently deleted:</p>
-                <ul>
-                    <li>User profile and personal information</li>
-                    <li>All your accounts and balance information</li>
-                    <li>Income and expense transactions</li>
-                    <li>Budget plans and categories</li>
-                    <li>Financial goals</li>
-                    <li>Notification preferences</li>
-                    <li>App settings</li>
-                    <li>Backup data</li>
-                </ul>
-            </div>
-        </div>
+        <h2>Data Collected</h2>
+        <h3>Account and Identity</h3>
+        <ul>
+            <li>Email (Firebase Authentication)</li>
+            <li>Name/surname, language preference</li>
+        </ul>
+        <h3>App Data</h3>
+        <ul>
+            <li>Payment plans, transactions, budgets, goals and related fields</li>
+            <li>Settings (theme, currency, notification preferences)</li>
+        </ul>
+        <h3>Device and Usage</h3>
+        <ul>
+            <li>Notification token (for push notifications)</li>
+            <li>Basic usage and diagnostic information</li>
+        </ul>
 
-        <div class="section">
-            <h2>📋 Important Notes</h2>
-            <div class="data-list">
-                <ul>
-                    <li>Account deletion cannot be undone</li>
-                    <li>Deleted data cannot be recovered</li>
-                    <li>You can register again with the same email after account deletion</li>
-                    <li>Uninstalling the app from the app store does not delete your account</li>
-                    <li>Account deletion process is completed within 24 hours</li>
-                </ul>
-            </div>
-        </div>
+        <h2>Data Sources and Storage</h2>
+        <ul>
+            <li><strong>Local:</strong> Temporary storage on device for offline work and re-synchronization</li>
+            <li><strong>Cloud:</strong> Account and app data on Firebase (Authentication, Firestore)</li>
+        </ul>
+
+        <h2>Data Processing Purposes</h2>
+        <ul>
+            <li>Authentication and account management</li>
+            <li>Data synchronization and backup</li>
+            <li>Payment reminders (optional)</li>
+            <li>Analytics and performance improvement</li>
+            <li>Security and legal obligations</li>
+        </ul>
+
+        <h2>Legal Bases</h2>
+        <ul>
+            <li>Performance of contract</li>
+            <li>Legitimate interest (security, debugging)</li>
+            <li>Explicit consent (e.g., notifications)</li>
+        </ul>
+
+        <h2>Third-Party Services</h2>
+        <ul>
+            <li>Firebase Authentication / Firestore (Google LLC)</li>
+            <li>Google Play Services</li>
+        </ul>
+
+        <h2>Data Sharing</h2>
+        <p>We do not sell your data. Limited sharing may occur only for legal obligations or security reasons.</p>
+
+        <h2>Security</h2>
+        <ul>
+            <li>HTTPS/TLS transmission security</li>
+            <li>Firebase Security Rules and access control</li>
+            <li>Secure storage approaches on device</li>
+        </ul>
+
+        <h2>Retention Periods</h2>
+        <ul>
+            <li>Account data: Until account is deleted</li>
+            <li>App data: Until user deletes or purpose is no longer valid</li>
+        </ul>
+
+        <h2>User Rights</h2>
+        <ul>
+            <li>Access, rectification, deletion</li>
+            <li>Restriction/objection to processing</li>
+            <li>Withdrawal of consent (notification preferences)</li>
+        </ul>
+
+        <h2>Children's Privacy</h2>
+        <p>We do not knowingly collect data from children under 13. If detected, it will be deleted.</p>
+
+        <h2>Changes</h2>
+        <p>The policy may be updated. Important changes may be announced in-app.</p>
 
         <div class="contact">
-            <h3>❓ Need Help?</h3>
-            <p>If you have questions about account deletion, please contact us:</p>
-            <p><strong>Email:</strong> <a href="mailto:umaycorporation@gmail.com">umaycorporation@gmail.com</a></p>
-        </div>
-
-        <div class="app-link">
-            <a href="https://play.google.com/store/apps/details?id=com.umaycorporation.fingofy" target="_blank">
-                📱 Download Fingofy
-            </a>
-        </div>
-
-        <div style="text-align: center; margin-top: 30px; color: #666; font-size: 0.9em;">
-            <p>&copy; 2024 Umay Corporation. All rights reserved.</p>
+            <h2>Contact</h2>
+            <p><strong>Email:</strong> umaycorporation@gmail.com</p>
         </div>
     </div>
 </body>
