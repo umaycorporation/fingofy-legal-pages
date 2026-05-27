@@ -51,39 +51,37 @@ zipalign -c -P 16 -v 4 android/app/build/outputs/bundle/release/app-release.aab
 
 ## 5. AdMob app-ads.txt
 
-**Sorun:** Play Console’da “geliştirici web sitesi bulunamadı” → `app-ads.txt` doğrulanamıyor.
+**Önemli:** AdMob, Play’de geliştirici sitesi alt yol olsa bile **alan adı kökünde** dosya arar:
 
-### Adım A – Play Console (zorunlu)
+- Doğru (AdMob): `https://umaycorporation.github.io/app-ads.txt`
+- Yetersiz (yalnızca alt yol): `https://umaycorporation.github.io/fingofy-legal-pages/app-ads.txt`
 
-1. [Google Play Console](https://play.google.com/console) → Uygulama → **Mağaza varlığı** → **Ana mağaza girişi**
-2. **Geliştirici web sitesi** alanına tam olarak şunu yazın:
-   ```
-   https://umaycorporation.github.io/fingofy-legal-pages/
-   ```
-3. Kaydedin (sonunda `/` olması önemli).
+### Adım A – Kök GitHub Pages (zorunlu, yapıldı)
 
-### Adım B – GitHub Pages (fingofy-legal-pages repo)
+Repo: `umaycorporation/umaycorporation.github.io` — kökte `app-ads.txt` yayında.
 
-1. `umaycorporation/fingofy-legal-pages` reposuna gidin
-2. Kök dizine `app-ads.txt` ekleyin (içerik):
+Tarayıcıda doğrulayın: https://umaycorporation.github.io/app-ads.txt
 
-   ```
-   google.com, pub-8034363135895920, DIRECT, f08c47fec0942fa0
-   ```
+### Adım B – Play Console
 
-3. GitHub Pages’in `main` veya `gh-pages` branch’ten yayınlandığını doğrulayın
-4. Tarayıcıda açın: https://umaycorporation.github.io/fingofy-legal-pages/app-ads.txt
+**Geliştirici web sitesi** (gizlilik/yasal sayfalar için) şu şekilde kalabilir:
 
-### Adım C – AdMob
+```
+https://umaycorporation.github.io/fingofy-legal-pages/
+```
 
-1. AdMob → Uygulamalar → Fingofy (Android)
-2. **app-ads.txt** doğrulamasını yeniden çalıştırın
-3. Yayılım 24–48 saat sürebilir
+Kök adrese çevirmek zorunlu değil; AdMob yine de kök `app-ads.txt` kullanır.
+
+### Adım C – AdMob (sizin yapmanız gereken)
+
+1. [AdMob](https://apps.admob.com/) → Uygulamalar → **Fingofy (Android)**
+2. **app-ads.txt** → **Güncellemeleri kontrol et** / doğrulamayı yeniden çalıştırın
+3. Birkaç dakika – 48 saat sürebilir
 
 **Bu repodaki referanslar:**
-- `docs/app-ads.txt`
+- `docs/app-ads.txt` (kaynak içerik)
 - `store-assets/metadata/app-ads.txt`
-- `constants/storePublishing.ts`
+- `constants/storePublishing.ts` → `appAdsTxt` kök URL
 
 ---
 

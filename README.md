@@ -20,5 +20,12 @@ Politika güncellendiğinde bu dosyaları da güncelleyin ve GitHub'a push edin.
 
 ## AdMob app-ads.txt
 
-`app-ads.txt` dosyası `docs/` altında tutulur ve GitHub Actions ile public Pages reposunun kök dizinine deploy edilir.
-Bu repo `fingofy-legal-pages` olarak yayınlandığında doğrulama URL'i: `https://umaycorporation.github.io/fingofy-legal-pages/app-ads.txt`
+Kaynak içerik: `docs/app-ads.txt`
+
+**AdMob doğrulama URL'i (alan adı kökü — zorunlu):**
+
+`https://umaycorporation.github.io/app-ads.txt`
+
+Repo: `umaycorporation/umaycorporation.github.io`
+
+`fingofy-legal-pages` altındaki kopya yasal sayfalar için kalabilir; AdMob tek başına onu kabul etmez.
