@@ -88,3 +88,59 @@ Otomatik istem: ilk bütçe veya işlem sonrası (3+ gün, 90 gün cooldown) —
 - [ ] Play’den kurulum yapan **5–10 kişi** ile iletişim
 - [ ] En az **5 gerçek mağaza yorumu** (moderasyon 24–72 saat sürebilir)
 - [ ] Console’daki tüm Production yorumlarına yanıt
+
+Takip tablosu: [REVIEW_OUTREACH_TRACKER.md](./REVIEW_OUTREACH_TRACKER.md)
+
+---
+
+## English — WhatsApp / SMS
+
+```
+Hi! I launched Fingofy on Google Play — a free budget & expense tracker for Android.
+If you try it from the Play Store, I'd love your feedback:
+https://play.google.com/store/apps/details?id=com.umaycorporation.fingofy
+
+If you like it, a short Play Store review would mean a lot 🙏
+```
+
+---
+
+## English — Email
+
+**Subject:** Would you try Fingofy? (Google Play)
+
+```
+Hi,
+
+I built Fingofy — a personal finance app for Android (budget, expenses, savings goals).
+
+Install from Google Play:
+https://play.google.com/store/apps/details?id=com.umaycorporation.fingofy
+
+After a few days of use, a rating and short review on Play would help a lot.
+
+Thanks,
+[Your name]
+```
+
+---
+
+## Play Console — English reply templates
+
+### Positive (5 stars)
+
+```
+Thank you! Your feedback means a lot. We're working on new features and improvements — stay tuned!
+```
+
+### Constructive (3–4 stars)
+
+```
+Thanks for the feedback. We're improving [mentioned topic]. Reach us via in-app Help → Support.
+```
+
+### Issue report (1–2 stars)
+
+```
+Sorry about the trouble. Please contact us through in-app Help → Support with details so we can fix it quickly.
+```

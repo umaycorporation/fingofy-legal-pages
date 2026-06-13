@@ -54,6 +54,8 @@ Play Console → **Grow → Store presence → Main store listing**
 
 - [ ] **Kısa açıklama** (80 karakter) — `play-store-description.txt` satır 4
 - [ ] **Uzun açıklama** — aynı dosya, güncel özellik listesi
+- [ ] **English custom listing** — [play-store-description-en.txt](../store-assets/metadata/play-store-description-en.txt)
+- [ ] Global ASO adımları — [GLOBAL_ASO_CHECKLIST.md](../store-assets/metadata/GLOBAL_ASO_CHECKLIST.md)
 - [ ] **6–8 ekran görüntüsü** — sıra: Dashboard → işlemler → bütçe → hedef → plan → bildirim
 - [ ] **Feature graphic** (1024×500)
 - [ ] **Sürüm notları** — `play-store-release-notes-tr.txt` / `-en.txt`
@@ -79,7 +81,8 @@ Detay: [store-assets/DEPLOYMENT_CHECKLIST.md](../store-assets/DEPLOYMENT_CHECKLI
 Hesapları **siz** açarsınız; içerik takvimi repoda hazır.
 
 - [ ] Instagram + TikTok (veya X) — kullanıcı adı, Play ikonu, bio + link
-- [ ] 4 haftalık içerik: [SOCIAL_CONTENT_CALENDAR.md](./SOCIAL_CONTENT_CALENDAR.md)
+- [ ] 4 haftalık içerik (TR): [SOCIAL_CONTENT_CALENDAR.md](./SOCIAL_CONTENT_CALENDAR.md)
+- [ ] 4 haftalık içerik (EN, global): [SOCIAL_CONTENT_CALENDAR_EN.md](./SOCIAL_CONTENT_CALENDAR_EN.md)
 - [ ] Haftada 2–3 gönderi; spam yorum **yapmayın**
 - [ ] WhatsApp / aile grubunda **bir kez** samimi öneri
 
@@ -90,6 +93,7 @@ Hesapları **siz** açarsınız; içerik takvimi repoda hazır.
 - [ ] Finans grupları / forum: önce yardım, link sorulursa veya bio’da
 - [ ] Uygulama içi **Paylaş** (Profil veya Dashboard banner)
 - [ ] Rehber: [COMMUNITY_ORGANIC_GUIDE.md](./COMMUNITY_ORGANIC_GUIDE.md)
+- [ ] Hafta 4–5 global lansman: [GLOBAL_LAUNCH_PLAYBOOK.md](./GLOBAL_LAUNCH_PLAYBOOK.md)
 
 ---
 
@@ -103,6 +107,8 @@ Hesapları **siz** açarsınız; içerik takvimi repoda hazır.
 | `budget_created` | Firebase Analytics | Kayıt sonrası dönüşüm |
 | `first_transaction` | Firebase Analytics | |
 | `app_share_completed` | Firebase Analytics | Paylaşım banner / menü |
+| `share_banner_shown` | Firebase Analytics | Dashboard banner |
+| `share_banner_dismissed` | Firebase Analytics | Banner kapatma |
 | Çökme / ANR | Android vitals | Artış → hotfix |
 | Ortalama puan | Play → Ratings and reviews | 5+ yorum sonrası anlamlı |
 
@@ -110,9 +116,9 @@ Hesapları **siz** açarsınız; içerik takvimi repoda hazır.
 
 1. Analytics → **Explore** → Funnel exploration
 2. Adımlar: `first_open` → `sign_up` → `budget_created` → `first_transaction`
-3. Haftalık kaydet; düşüş varsa önce ürün/bug, sonra daha fazla paylaşım
+3. Detay: [FIREBASE_FUNNEL_SETUP.md](./FIREBASE_FUNNEL_SETUP.md)
 
-Tam rutin: [GROWTH_PLAYBOOK.md](./GROWTH_PLAYBOOK.md) Bölüm 2.
+Tam rutin: [GROWTH_PLAYBOOK.md](./GROWTH_PLAYBOOK.md) Bölüm 2. Haftalık şablon: [WEEKLY_FUNNEL_REPORT.md](./WEEKLY_FUNNEL_REPORT.md).
 
 ---
 
@@ -123,6 +129,6 @@ Tam rutin: [GROWTH_PLAYBOOK.md](./GROWTH_PLAYBOOK.md) Bölüm 2.
 | Gün 1–3 | Production doğrulama + ASO + test kanalı |
 | Gün 4–14 | Screenshot, yorum, sosyal hesap |
 | Gün 15–30 | Haftada 2–3 sosyal + 1 topluluk katkısı |
-| Gün 31–45 | İçerik devam + funnel + yorum yanıtı |
+| Gün 31–45 | İçerik devam + funnel + yorum yanıtı + PH/IH lansman |
 
-**Ücretli reklam (UAC, Meta)** bu checklist’in dışında; organik 2–4 hafta veri sonrası [GROWTH_PLAYBOOK.md](./GROWTH_PLAYBOOK.md) Faz 3.
+**Ücretli reklam (UAC):** [PAID_ACQUISITION_UAC.md](./PAID_ACQUISITION_UAC.md) — organik 4–6 hafta sonrası.

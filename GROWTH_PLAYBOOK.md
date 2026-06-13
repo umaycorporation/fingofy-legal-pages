@@ -18,9 +18,17 @@ Bu doküman production yayını sonrası operasyon, ASO, kullanıcı edinimi ve 
 
 | Rehber | İçerik |
 |--------|--------|
-| [SOCIAL_CONTENT_CALENDAR.md](./SOCIAL_CONTENT_CALENDAR.md) | 4 haftalık Instagram / TikTok metinleri |
+| [SOCIAL_CONTENT_CALENDAR.md](./SOCIAL_CONTENT_CALENDAR.md) | 4 haftalık Instagram / TikTok metinleri (TR) |
+| [SOCIAL_CONTENT_CALENDAR_EN.md](./SOCIAL_CONTENT_CALENDAR_EN.md) | 4 haftalık sosyal içerik (EN, global) |
 | [COMMUNITY_ORGANIC_GUIDE.md](./COMMUNITY_ORGANIC_GUIDE.md) | Forum ve WhatsApp paylaşımı |
-| [REVIEW_REQUEST_TEMPLATES.md](./REVIEW_REQUEST_TEMPLATES.md) | Play yorum isteme ve yanıt şablonları |
+| [GLOBAL_LAUNCH_PLAYBOOK.md](./GLOBAL_LAUNCH_PLAYBOOK.md) | Product Hunt, Indie Hackers, Reddit |
+| [REVIEW_REQUEST_TEMPLATES.md](./REVIEW_REQUEST_TEMPLATES.md) | Play yorum isteme ve yanıt şablonları (TR + EN) |
+| [REVIEW_OUTREACH_TRACKER.md](./REVIEW_OUTREACH_TRACKER.md) | Yorum outreach takip tablosu |
+| [FIREBASE_FUNNEL_SETUP.md](./FIREBASE_FUNNEL_SETUP.md) | Analytics huni kurulumu |
+| [WEEKLY_GROWTH_ROUTINE.md](./WEEKLY_GROWTH_ROUTINE.md) | Haftalık 15–20 dk rutin |
+| [WEEKLY_FUNNEL_REPORT.md](./WEEKLY_FUNNEL_REPORT.md) | Haftalık funnel rapor şablonu |
+| [PAID_ACQUISITION_UAC.md](./PAID_ACQUISITION_UAC.md) | Google UAC (hafta 8+, ücretli) |
+| [GLOBAL_ASO_CHECKLIST.md](../store-assets/metadata/GLOBAL_ASO_CHECKLIST.md) | EN+TR custom listings, ülkeler |
 
 Yerel doğrulama: `npm run verify:growth-build`
 
@@ -72,7 +80,7 @@ Her **Pazartesi** (15–20 dk):
 | 16 KB uyumluluk | App Bundle Explorer → Memory page size | Desteklenmiyorsa → `npm run check:android-16kb` |
 | AdMob | AdMob paneli | Politika uyarısı / düşük fill rate |
 | app-ads.txt | Tarayıcıda kök URL | 404 ise acil düzelt |
-| Firebase funnel | Analytics → Events: `first_open`, `sign_up`, `first_transaction`, `budget_created`, `app_share_completed` | Düşük dönüşüm → UX incele |
+| Firebase funnel | Analytics → Events: `first_open`, `sign_up`, `first_transaction`, `budget_created`, `app_share_completed`, `share_banner_shown` | Düşük dönüşüm → UX incele |
 | Yorumlar | Ratings and reviews | 48 saat içinde yanıt |
 
 Release öncesi: [PLAY_CONSOLE_ANDROID_COMPLIANCE.md](./PLAY_CONSOLE_ANDROID_COMPLIANCE.md) + `npm run check:android-16kb`.
@@ -155,7 +163,7 @@ Detay: [FREE_USER_ACQUISITION_CHECKLIST.md](./FREE_USER_ACQUISITION_CHECKLIST.md
 |-------|----------|
 | [constants/storeLinks.ts](../constants/storeLinks.ts) | Play URL’leri |
 | [services/storeEngagementService.ts](../services/storeEngagementService.ts) | Review + paylaşım |
-| [services/growthFunnelService.ts](../services/growthFunnelService.ts) | `first_open`, `sign_up`, `first_transaction`, `budget_created` |
+| [services/growthFunnelService.ts](../services/growthFunnelService.ts) | `first_open`, `sign_up`, `first_transaction`, `budget_created`, `share_banner_*` |
 | [components/profile/ProfileMenu.tsx](../components/profile/ProfileMenu.tsx) | Değerlendir / paylaş menüsü |
 | [components/growth/ShareAppBanner.tsx](../components/growth/ShareAppBanner.tsx) | Dashboard paylaşım banner |
 | [services/sharePromptService.ts](../services/sharePromptService.ts) | Banner gösterim koşulu |

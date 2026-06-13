@@ -47,7 +47,7 @@ Yine de birkaç uygulama deneyip arayüze alıştığın en iyisi senin için do
 ## Reddit / Ekşi / Facebook grupları
 
 - Grup kurallarını okuyun; self-promotion yasaksa link paylaşmayın.
-- **Product Hunt / Indie Hackers:** İngilizce kısa lansman (tek sefer) — “Show HN” tarzı, teknik + problem çözümü.
+- **Product Hunt / Indie Hackers:** İngilizce kısa lansman (tek sefer) — [GLOBAL_LAUNCH_PLAYBOOK.md](./GLOBAL_LAUNCH_PLAYBOOK.md)
 - Ekşi’de başlık açmak yerine ilgili entry’lerde **faydalı cevap** daha güvenli.
 
 ---
