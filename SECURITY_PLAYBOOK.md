@@ -6,7 +6,8 @@ Bu doküman güvenlik test checklist'i, Firebase Console ayarları, anahtar yön
 
 - **Kimlik doğrulama:** Firebase Auth
 - **Veri:** Firestore (kullanıcı izolasyonu + alan düzeyinde kurallar)
-- **Koruma katmanları:** App Check (Play Integrity), Firestore Rules, Cloud Functions
+- **Profil fotoğrafları:** Firebase Storage (`profilePictures/{uid}/avatar.webp`); Firestore'da yalnızca path string
+- **Koruma katmanları:** App Check (Play Integrity), Firestore Rules, Storage Rules, Cloud Functions
 - **IAP:** `verifyPlayPurchase` — Play Developer API ile sunucu doğrulaması
 - **Güvenlik logları:** `logSecurityEvent` Cloud Function (istemci doğrudan yazamaz)
 
@@ -15,6 +16,7 @@ Bu doküman güvenlik test checklist'i, Firebase Console ayarları, anahtar yön
 ### Firebase Console
 
 - [ ] **App Check → Firestore:** Enforcement = **Enforced**
+- [ ] **App Check → Storage:** Enforcement = **Enforced** (profil fotoğrafları)
 - [ ] **App Check → Authentication:** Enforcement = **Enforced** (önerilir)
 - [ ] **App Check → Cloud Functions:** Enforcement = **Enforced**
 - [ ] Debug token'lar yalnızca geliştirici cihazlarda; production token rotate edildi
@@ -42,11 +44,23 @@ Bu doküman güvenlik test checklist'i, Firebase Console ayarları, anahtar yön
 ## Firestore kuralları — önemli kısıtlar
 
 - `users.entitlements`: istemci yazamaz (yalnızca `verifyPlayPurchase` Admin SDK)
+- `users.profilePicture`: yalnızca `builtin:{id}` veya kendi `upload:profilePictures/{uid}/avatar.*` path'i
 - Tüm owner koleksiyonlarda `userId` güncellemede değiştirilemez
 - `analytics`: okuma kapalı
 - `securityLogs`, `purchaseVerifications`, `_rateLimits`: istemci erişimi kapalı
 - `appLogs`: alan validasyonu zorunlu
 - `fcmQueue`: payload validasyonu + Function tarafında saatlik rate limit
+
+## Storage kuralları
+
+Path: `profilePictures/{userId}/avatar.{webp|jpg|jpeg|png}`
+
+- **read:** oturum açmış kullanıcılar
+- **write/delete:** yalnızca `request.auth.uid == userId`, max 2 MB, `image/(webp|jpeg|png)`
+
+Deploy: `firebase deploy --only storage` (veya `npm run deploy:security` ile birlikte)
+
+iOS galeri izni: `NSPhotoLibraryUsageDescription` (`Info.plist` — release build öncesi doğrula)
 
 ## Anahtar ve sır yönetimi
 

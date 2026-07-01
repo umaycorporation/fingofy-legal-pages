@@ -6,7 +6,7 @@ Tüm kullanıcı verisi `userId` (veya `users` için `uid`) ile sahiplik kontrol
 
 | Koleksiyon | Service / Context | Ana alanlar | Not |
 |------------|-------------------|-------------|-----|
-| `users` | `userService`, `AuthContext` | `uid`, profil, `entitlements` | `entitlements` yalnızca Functions yazar |
+| `users` | `userService`, `AuthContext` | `uid`, profil, `entitlements`, `profilePicture` | `entitlements` yalnızca Functions yazar |
 | `transactions` | `transactionService`, `TransactionContext` | `userId`, amount, category, date | Ana işlem kaydı |
 | `recurringTransactions` | `transactionService`, `TransactionContext` | `userId`, frequency, nextDate | Tekrarlayan işlem şablonu |
 | `transaction_installments` | `transactionInstallmentService` | `userId`, parent transaction | Taksitli işlemler |
@@ -53,7 +53,21 @@ function isOwner(userId) {
 
 | Koleksiyon | Kısıt |
 |------------|-------|
-| `users` | `entitlements` istemci yazamaz; `uid` değiştirilemez |
+| `users` | `entitlements` istemci yazamaz; `uid` değiştirilemez; `profilePicture` formatı kurallarla doğrulanır |
+
+## `users.profilePicture`
+
+Tek string alanı; fotoğraf binary Firestore'da **saklanmaz**.
+
+| Değer | Anlam |
+|-------|--------|
+| `null` / alan yok | Varsayılan illüstrasyon avatar (bundle) |
+| `builtin:{id}` | Hazır avatar (ör. `builtin:prof-male-1`) — görsel uygulama içinde |
+| `upload:profilePictures/{uid}/avatar.webp` | Kullanıcı fotoğrafı — dosya **Firebase Storage**'da |
+
+Storage path: `profilePictures/{uid}/avatar.webp` (tek aktif dosya, üzerine yazılır).
+
+Hesap silme: `userService.deleteUserAccount()` Storage avatar dosyasını da siler (`avatarService.deleteUploadedAvatar`).
 | `defaultCategories`, `defaultAccounts` | Okuma açık, yazma kapalı (veya admin) |
 | `analytics` | İstemci okuma/yazma kapalı |
 | `securityLogs`, `purchaseVerifications`, `_rateLimits` | İstemci erişimi kapalı |
@@ -76,6 +90,8 @@ Yeni sorgu eklerken:
 `userService.deleteUserData()` tüm ilişkili koleksiyonları temizler:
 
 `plans`, `transactions`, `recurringTransactions`, `categories`, `userAccounts`, `accounts`, `budgets`, `budgetTemplates`, `financialGoals`, `goalContributions`, `deviceTokens`, `goalMilestones`
+
+Ayrıca Firebase Storage: `profilePictures/{uid}/avatar.webp`
 
 ## Test
 
