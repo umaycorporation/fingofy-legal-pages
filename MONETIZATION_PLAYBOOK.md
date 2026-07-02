@@ -144,6 +144,7 @@ Play Console → **App content → Data safety**:
 - [ ] **Purchase history** — Evet (Google Play Billing)
 - [ ] Veri şifreleme / aktarım — mevcut beyanla uyumlu
 - [ ] Gizlilik politikasında satın alma maddesi — [DATA_SAFETY_IAP_NOTES.md](./DATA_SAFETY_IAP_NOTES.md)
+- [ ] Fotoğraf seçimi yalnızca kullanıcı aksiyonunda sistem picker ile yapılır; manifestte `READ_MEDIA_IMAGES` / `READ_EXTERNAL_STORAGE` bulunmaz
 
 ---
 
