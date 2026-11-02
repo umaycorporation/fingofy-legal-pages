@@ -136,6 +136,20 @@
             margin-right: 10px;
         }
 
+        .request {
+            background: #EEF2FF;
+            border-left: 4px solid #4F46E5;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        .request h2 { margin-top: 0; }
+        .request code {
+            background: #fff;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
         .contact {
             background: #e3f2fd;
             border-radius: 8px;
@@ -228,81 +242,101 @@
         <div class="language-switch">
             <a href="account-deletion.html">🇹🇷 Türkçe</a>
             <a href="account-deletion-en.html">🇺🇸 English</a>
-            <a href="index.html">📄 Gizlilik Politikası</a>
+            <a href="index.html">📄 Aydınlatma Metni</a>
+            <a href="terms.html">📄 Kullanım Şartları</a>
         </div>
 
         <div class="warning">
             <h3>⚠️ Önemli Uyarı</h3>
-            <p>Hesap silme işlemi <strong>geri alınamaz</strong>. Bu işlem tamamlandıktan sonra tüm verileriniz kalıcı olarak silinecek ve hesabınıza tekrar erişim sağlayamayacaksınız.</p>
+            <p>Hesap silme işlemi <strong>geri alınamaz</strong>. Verileriniz kalıcı olarak silinir; yedek tutulmadığı için geri getirilemez.</p>
+            <p><strong>Aboneliğiniz varsa önce iptal edin:</strong> hesabı silmek Google Play veya App Store’daki aboneliği iptal etmez. Google Play &gt; Profil &gt; Ödemeler ve abonelikler &gt; Abonelikler &gt; Fingofy &gt; Aboneliği iptal et. iPhone’da: Ayarlar &gt; adınız &gt; Abonelikler &gt; Fingofy &gt; Aboneliği İptal Et.</p>
         </div>
 
         <div class="section">
-            <h2>📱 Hesap Silme Adımları</h2>
+            <h2>📱 Uygulamadan silme (anında)</h2>
             <div class="steps">
                 <div class="step">
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <strong>Fingofy uygulamasını açın</strong>
-                        <p>Mobil cihazınızda Fingofy uygulamasını başlatın</p>
+                        <p>Hesabınıza giriş yapın</p>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
                     <div class="step-content">
                         <strong>Profil sekmesine gidin</strong>
-                        <p>Ana ekranda alt kısımdaki "Profil" sekmesine dokunun</p>
+                        <p>Alt menüdeki "Profil" sekmesine dokunun</p>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
                     <div class="step-content">
-                        <strong>"Hesabımı Sil" butonuna tıklayın</strong>
-                        <p>Profil menüsünde "Hesabımı Sil" seçeneğini bulun ve dokunun</p>
+                        <strong>"Hesabımı Sil"e dokunun</strong>
+                        <p>Güvenlik için şifrenizi ya da Google/Apple girişinizi yeniden doğrulamanız istenir</p>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">4</div>
                     <div class="step-content">
                         <strong>Onaylayın</strong>
-                        <p>Uyarı mesajını okuyun ve "Evet, Hesabımı Sil" butonuna tıklayarak işlemi onaylayın</p>
+                        <p>"Evet, Hesabımı Sil" ile onayladığınızda hesabınız ve verileriniz hemen silinir</p>
                     </div>
                 </div>
             </div>
         </div>
 
+        <div class="request" id="request">
+            <h2>✉️ Uygulamaya erişemiyorsanız: e-postayla talep</h2>
+            <p>Uygulamayı yükleyemiyor ya da giriş yapamıyorsanız, Fingofy hesabınıza <strong>kayıtlı e-posta adresinizden</strong> <a href="mailto:umaycorporation@gmail.com?subject=Hesap%20silme%20talebi">umaycorporation@gmail.com</a> adresine <code>Hesap silme talebi</code> konulu bir e-posta gönderin.</p>
+            <ul>
+                    <li>Kimliğinizi, talebin hesaba kayıtlı e-posta adresinden gelmesiyle doğrularız. Başka bir adresten gelen taleplerde ek doğrulama isteyebiliriz.</li>
+                    <li>Hesabınızı ve verilerinizi <strong>en geç 30 gün içinde</strong> siler, işlem tamamlandığında size e-postayla bildiririz.</li>
+                    <li>Hesabınızı silmeden yalnızca belirli verilerinizin silinmesini de aynı adresten isteyebilirsiniz.</li>
+            </ul>
+        </div>
+
         <div class="section">
-            <h2>🗑️ Silinecek Veriler</h2>
+            <h2>🗑️ Silinen veriler</h2>
             <div class="data-list">
-                <p>Aşağıdaki tüm verileriniz kalıcı olarak silinecektir:</p>
                 <ul>
-                    <li>Kullanıcı profili ve kişisel bilgileriniz</li>
-                    <li>Tüm hesaplarınız ve bakiye bilgileri</li>
-                    <li>Gelir ve gider işlemleriniz</li>
-                    <li>Bütçe planlarınız ve kategorileriniz</li>
-                    <li>Finansal hedefleriniz</li>
-                    <li>Bildirim tercihleriniz</li>
-                    <li>Uygulama ayarlarınız</li>
-                    <li>Yedekleme verileriniz</li>
+                    <li>Profiliniz: ad, soyad, e-posta, dil ve para birimi tercihleri, profil fotoğrafı</li>
+                    <li>Hesaplarınız ve bakiyeleri, kredi kartları</li>
+                    <li>Gelir/gider işlemleri, taksitler, tekrarlayan ve planlı ödemeler</li>
+                    <li>Bütçeler, kategoriler, hedefler ve katkıları</li>
+                    <li>Borç/alacak kayıtları ve ödemeleri, kasa (altın, döviz, kripto) kayıtları, planlar</li>
+                    <li>Bildirimler, bildirim ayarları ve cihaz bildirim belirteçleri</li>
+                    <li>Hesabınıza bağlı güvenlik ve uygulama kayıtları</li>
+                    <li>Giriş hesabınız (Firebase Authentication)</li>
                 </ul>
             </div>
         </div>
 
         <div class="section">
-            <h2>📋 Önemli Notlar</h2>
+            <h2>📦 Saklanan veriler ve süreleri</h2>
             <div class="data-list">
                 <ul>
-                    <li>Hesap silme işlemi geri alınamaz</li>
-                    <li>Silinen veriler kurtarılamaz</li>
-                    <li>Hesap silindikten sonra aynı e-posta ile tekrar kayıt olabilirsiniz</li>
-                    <li>Uygulama mağazasından uygulamayı kaldırmak hesabınızı silmez</li>
-                    <li>Hesap silme işlemi 24 saat içinde tamamlanır</li>
+                    <li><strong>Satın alma doğrulama kaydı</strong> (ürün, sipariş numarası, tarih): hesabınızla bağı koparılarak 2 yıl saklanır. Amaç, aynı satın almanın aynı anda birden fazla hesapta kullanılmasını önlemektir. Aynı Google Play / App Store hesabıyla yeni bir Fingofy hesabı açarsanız satın alımlarınızı "Satın alımları geri yükle" ile yeni hesabınıza taşıyabilirsiniz.</li>
+                    <li><strong>Sunucu sistem kayıtları</strong>: en fazla 30 gün içinde otomatik silinir.</li>
+                    <li><strong>Çökme raporları</strong> (Firebase Crashlytics; hesabınızla ilişkilendirilmez): en fazla 90 gün içinde otomatik silinir.</li>
+                    <li>Google Play ve App Store’daki satın alma ve fatura kayıtları Google’ın ve Apple’ın sorumluluğundadır ve bu işlemle silinmez.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📋 Önemli notlar</h2>
+            <div class="data-list">
+                <ul>
+                    <li>Uygulamayı cihazdan kaldırmak hesabınızı silmez.</li>
+                    <li>Hesap silindikten sonra aynı e-posta adresiyle yeniden kayıt olabilirsiniz; eski verileriniz geri gelmez.</li>
+                    <li>Ayrıntılar: <a href="index.html">Gizlilik Politikası</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="contact">
-            <h3>❓ Yardıma mı İhtiyacınız Var?</h3>
-            <p>Hesap silme işlemi ile ilgili sorularınız için bizimle iletişime geçin:</p>
+            <h3>❓ Sorularınız için</h3>
             <p><strong>E-posta:</strong> <a href="mailto:umaycorporation@gmail.com">umaycorporation@gmail.com</a></p>
         </div>
 
@@ -313,7 +347,7 @@
         </div>
 
         <div style="text-align: center; margin-top: 30px; color: #666; font-size: 0.9em;">
-            <p>&copy; 2024 Umay Corporation. Tüm hakları saklıdır.</p>
+            <p>Fingofy, Ümit BALIKCI tarafından "Umay Corporation" markasıyla yayımlanır.</p>
         </div>
     </div>
 </body>

@@ -136,6 +136,20 @@
             margin-right: 10px;
         }
 
+        .request {
+            background: #EEF2FF;
+            border-left: 4px solid #4F46E5;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        .request h2 { margin-top: 0; }
+        .request code {
+            background: #fff;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
         .contact {
             background: #e3f2fd;
             border-radius: 8px;
@@ -229,80 +243,100 @@
             <a href="account-deletion.html">🇹🇷 Türkçe</a>
             <a href="account-deletion-en.html">🇺🇸 English</a>
             <a href="en.html">📄 Privacy Policy</a>
+            <a href="terms-en.html">📄 Terms of Service</a>
         </div>
 
         <div class="warning">
-            <h3>⚠️ Important Warning</h3>
-            <p>Account deletion is <strong>irreversible</strong>. After this process is completed, all your data will be permanently deleted and you will not be able to access your account again.</p>
+            <h3>⚠️ Important</h3>
+            <p>Account deletion <strong>cannot be undone</strong>. Your data is permanently deleted; we keep no backups, so it cannot be restored.</p>
+            <p><strong>Cancel any subscription first:</strong> deleting the account does not cancel your Google Play or App Store subscription. Google Play &gt; Profile &gt; Payments &amp; subscriptions &gt; Subscriptions &gt; Fingofy &gt; Cancel subscription. On iPhone: Settings &gt; your name &gt; Subscriptions &gt; Fingofy &gt; Cancel Subscription.</p>
         </div>
 
         <div class="section">
-            <h2>📱 Account Deletion Steps</h2>
+            <h2>📱 Delete in the app (immediate)</h2>
             <div class="steps">
                 <div class="step">
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <strong>Open the Fingofy app</strong>
-                        <p>Launch the Fingofy app on your mobile device</p>
+                        <p>Sign in to your account</p>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
                     <div class="step-content">
-                        <strong>Go to Profile tab</strong>
-                        <p>Tap on the "Profile" tab at the bottom of the main screen</p>
+                        <strong>Go to the Profile tab</strong>
+                        <p>Tap "Profile" in the bottom menu</p>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
                     <div class="step-content">
-                        <strong>Tap "Delete My Account" button</strong>
-                        <p>Find and tap the "Delete My Account" option in the profile menu</p>
+                        <strong>Tap "Delete My Account"</strong>
+                        <p>For security you will be asked to confirm your password or your Google/Apple sign-in again</p>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">4</div>
                     <div class="step-content">
-                        <strong>Confirm the action</strong>
-                        <p>Read the warning message and tap "Yes, Delete My Account" to confirm the action</p>
+                        <strong>Confirm</strong>
+                        <p>When you confirm with "Yes, Delete My Account", your account and data are deleted immediately</p>
                     </div>
                 </div>
             </div>
         </div>
 
+        <div class="request" id="request">
+            <h2>✉️ Can’t use the app? Request by email</h2>
+            <p>If you cannot install the app or sign in, send an email <strong>from the email address registered to your Fingofy account</strong> to <a href="mailto:umaycorporation@gmail.com?subject=Account%20deletion%20request">umaycorporation@gmail.com</a> with the subject <code>Account deletion request</code>.</p>
+            <ul>
+                    <li>We verify your identity by the request coming from the account’s registered email address. For requests from another address we may ask for additional verification.</li>
+                    <li>We delete your account and data <strong>within 30 days at the latest</strong> and confirm by email when it is done.</li>
+                    <li>You can also ask from the same address for specific data to be deleted without deleting your account.</li>
+            </ul>
+        </div>
+
         <div class="section">
-            <h2>🗑️ Data That Will Be Deleted</h2>
+            <h2>🗑️ Data that is deleted</h2>
             <div class="data-list">
-                <p>The following data will be permanently deleted:</p>
                 <ul>
-                    <li>User profile and personal information</li>
-                    <li>All your accounts and balance information</li>
-                    <li>Income and expense transactions</li>
-                    <li>Budget plans and categories</li>
-                    <li>Financial goals</li>
-                    <li>Notification preferences</li>
-                    <li>App settings</li>
-                    <li>Backup data</li>
+                    <li>Your profile: first and last name, email, language and currency preferences, profile photo</li>
+                    <li>Your accounts and balances, credit cards</li>
+                    <li>Income/expense transactions, instalments, recurring and scheduled payments</li>
+                    <li>Budgets, categories, goals and contributions</li>
+                    <li>Debt/credit records and payments, vault (gold, currency, crypto) records, plans</li>
+                    <li>Notifications, notification settings and device push tokens</li>
+                    <li>Security and app logs linked to your account</li>
+                    <li>Your sign-in account (Firebase Authentication)</li>
                 </ul>
             </div>
         </div>
 
         <div class="section">
-            <h2>📋 Important Notes</h2>
+            <h2>📦 Data we keep and for how long</h2>
             <div class="data-list">
                 <ul>
-                    <li>Account deletion cannot be undone</li>
-                    <li>Deleted data cannot be recovered</li>
-                    <li>You can register again with the same email after account deletion</li>
-                    <li>Uninstalling the app from the app store does not delete your account</li>
-                    <li>Account deletion process is completed within 24 hours</li>
+                    <li><strong>Purchase verification record</strong> (product, order number, date): kept for 2 years with its link to your account removed, to stop the same purchase being used on several accounts at once. If you create a new Fingofy account with the same Google Play / App Store account, you can move your purchases to it with "Restore purchases".</li>
+                    <li><strong>Server system logs</strong>: deleted automatically within 30 days at most.</li>
+                    <li><strong>Crash reports</strong> (Firebase Crashlytics; not linked to your account): deleted automatically within 90 days at most.</li>
+                    <li>Purchase and billing records in Google Play and the App Store are Google’s and Apple’s responsibility and are not deleted by this process.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📋 Notes</h2>
+            <div class="data-list">
+                <ul>
+                    <li>Uninstalling the app does not delete your account.</li>
+                    <li>After deletion you can sign up again with the same email address; your old data does not come back.</li>
+                    <li>Details: <a href="en.html">Privacy Policy</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="contact">
-            <h3>❓ Need Help?</h3>
-            <p>If you have questions about account deletion, please contact us:</p>
+            <h3>❓ Questions</h3>
             <p><strong>Email:</strong> <a href="mailto:umaycorporation@gmail.com">umaycorporation@gmail.com</a></p>
         </div>
 
@@ -313,7 +347,7 @@
         </div>
 
         <div style="text-align: center; margin-top: 30px; color: #666; font-size: 0.9em;">
-            <p>&copy; 2024 Umay Corporation. All rights reserved.</p>
+            <p>Fingofy is published by Ümit BALIKCI under the "Umay Corporation" brand.</p>
         </div>
     </div>
 </body>

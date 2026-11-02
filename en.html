@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Üretilmiş dosya: elle düzenlemeyin. Kaynak constants/translations/en.ts, üretici scripts/build-legal-pages.js (npm run legal:pages). -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,36 +21,22 @@
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        h1 {
-            color: #4F46E5;
-            font-size: 2.2em;
-            margin-bottom: 20px;
-            text-align: center;
-        }
+        h1 { color: #4F46E5; font-size: 2.2em; margin-bottom: 20px; text-align: center; }
         h2 {
             color: #1F2937;
-            font-size: 1.4em;
+            font-size: 1.3em;
             margin-top: 30px;
             margin-bottom: 15px;
             border-bottom: 2px solid #E5E7EB;
             padding-bottom: 10px;
         }
-        h3 {
-            color: #374151;
-            font-size: 1.2em;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-        p, li {
-            margin-bottom: 10px;
-            color: #4B5563;
-        }
+        p, li { margin-bottom: 10px; color: #4B5563; }
         ul { padding-left: 25px; }
+        a { color: #4F46E5; }
         .update-date { text-align: center; color: #6B7280; font-style: italic; margin-bottom: 30px; }
-        .contact { background: #EFF6FF; padding: 20px; border-radius: 8px; border-left: 4px solid #4F46E5; margin-top: 30px; }
         .app-info { background: #F0FDF4; padding: 15px; border-radius: 8px; text-align: center; font-weight: 600; color: #059669; margin-bottom: 30px; }
         .language-switch { text-align: center; margin-bottom: 20px; }
-        .language-switch a { color: #4F46E5; text-decoration: none; margin: 0 10px; }
+        .language-switch a { text-decoration: none; margin: 0 8px; }
         @media (max-width: 600px) {
             body { padding: 10px; }
             .container { padding: 20px; }
@@ -60,143 +47,119 @@
 <body>
     <div class="container">
         <div class="language-switch">
-            <a href="index.html">Türkçe</a> | <a href="en.html">English</a>
-            &nbsp;·&nbsp;
-            <a href="account-deletion-en.html">Account Deletion</a>
+            <a href="en.html">Privacy Notice</a> ·
+            <a href="terms-en.html">Terms of Service</a> ·
+            <a href="account-deletion-en.html">Account Deletion</a> ·
+            <a href="index.html">Türkçe</a>
         </div>
 
-        <h1>Fingofy - Privacy Policy</h1>
-        <p class="update-date"><strong>Last Updated: October 06, 2026</strong></p>
+        <h1>Privacy Policy</h1>
+        <p class="update-date"><strong>Last updated: November 2, 2026</strong></p>
 
-        <div class="app-info">
-            Fingofy requires an active internet connection. Your financial data is not stored on the device; it is kept on Firebase (Google Cloud).
-        </div>
+        <div class="app-info">Fingofy needs an internet connection to work. Your financial data is not stored on the device; it is kept on Google Cloud (Firebase).</div>
 
-        <h2>Overview</h2>
-        <p>Fingofy helps users manage payment plans, transactions, budgets, goals, debts/credits and accounts. This policy explains what data we collect, how we use it, who we share it with, and your rights.</p>
-        <p>Data controller: <strong>Umay Corporation</strong> — umaycorporation@gmail.com</p>
+        <p>This notice explains how your personal data is processed in the Fingofy app, as required by Article 10 of Turkish Law No. 6698 on the Protection of Personal Data (&quot;KVKK&quot;) and Article 13 of the EU General Data Protection Regulation (&quot;GDPR&quot;).</p>
 
-        <h2>Data We Collect</h2>
-        <h3>Account and Identity</h3>
+        <h2>1. Data controller</h2>
+        <p>Data controller: Ümit BALIKCI (individual developer). Fingofy is published under the &quot;Umay Corporation&quot; brand; Umay Corporation is not a separate legal entity.</p>
+        <p>Address: Altınşehir Mah. Kanarya Sok., Ümraniye, 34764 Istanbul, Türkiye</p>
+        <p>Email: <a href="mailto:umaycorporation@gmail.com">umaycorporation@gmail.com</a></p>
+
+        <h2>2. Data we process</h2>
         <ul>
-            <li>Email address (Firebase Authentication)</li>
-            <li>Name/surname, language and currency preference</li>
-            <li>If you use Google Sign-In: email, name and profile information from your Google account</li>
-            <li>Profile picture, if you upload one (Firebase Storage)</li>
+            <li>Identity and contact: first and last name, email address; name and email from your Google or Apple account if you sign in with them; an optional profile photo.</li>
+            <li>Financial records: accounts and balances, income/expense transactions, installments, recurring and scheduled payments, budgets, goals, debts/receivables, credit card payments, vault (gold, currency, crypto) holdings, plans, categories and records from files you import.</li>
+            <li>Preferences: language, currency, theme, notification settings.</li>
+            <li>Purchases: product, order number, purchase and expiry date, status. Your card details never reach us.</li>
+            <li>Device and security: notification token, platform, app version, time zone, last activity time, app and device integrity signals (Firebase App Check, Google Play Integrity), IP address.</li>
+            <li>Errors and usage: crash reports (stack trace, device model, operating system) and in-app events (e.g. screen views, feature use). Analytics events are not linked to your account ID but to Firebase's device-specific app instance ID; amounts are sent only as ranges, never raw.</li>
+            <li>Advertising (free version only): advertising ID, IP address, device information.</li>
         </ul>
-        <h3>App Data</h3>
+        <p>We do not process special categories of personal data.</p>
+
+        <h2>3. Purposes and legal bases</h2>
+        <p>Legal bases under KVKK Art. 5(2) (GDPR Art. 6(1) equivalent for the EEA/UK in brackets):</p>
         <ul>
-            <li>Payment plans, transactions, budgets, goals, debts/credits, accounts and vault holdings</li>
-            <li>Settings (theme, currency, notification preferences)</li>
+            <li>Creating your account, providing the service and syncing your data across your devices: conclusion and performance of a contract (b).</li>
+            <li>Payment reminders and status notifications: performance of a contract (b). You can turn notification permission off in your device settings.</li>
+            <li>Verifying purchases and granting subscription benefits: performance of a contract (b); preventing purchases from being abused on other accounts: legitimate interest (f).</li>
+            <li>Security, fake-client and abuse prevention, rate limiting, security logs: legal obligation on data security (KVKK Art. 12) and legitimate interest (c, f).</li>
+            <li>Debugging and performance (crash reports): legitimate interest (f).</li>
+            <li>Usage analytics and product improvement: legitimate interest; you can turn it off at any time (see 4). In the EEA, UK and Switzerland only if you turn it on (consent).</li>
+            <li>Promotional notifications: explicit consent / prior consent for commercial electronic messages (Turkish Law No. 6563 Art. 6); only if you turn them on in Notification settings, off by default.</li>
+            <li>Ads in the free version: legitimate interest for non-personalized ads (f); consent for personalized ads.</li>
+            <li>Answering your requests and legal disputes: legal obligation and establishing or defending a right (c, f).</li>
         </ul>
-        <h3>Device and Usage</h3>
+        <p>Our legitimate interest is a secure, error-free app and preventing purchase abuse. You may object to this processing.</p>
+
+        <h2>4. Usage analytics and your choices</h2>
+        <p>You can turn usage analytics off and on at any time under Profile &gt; Usage analytics; while it is off, no analytics data is sent from your device. In the EEA, UK and Switzerland analytics is off by default. Crash reports are needed for the app to work reliably and are based on legitimate interest.</p>
+
+        <h2>5. Advertising</h2>
+        <p>The free version shows non-personalized banner ads through Google AdMob. Non-personalized ads may still use data such as the advertising ID and IP address for frequency capping, aggregated reporting and fraud prevention. In the EEA, UK and Switzerland, Google's consent form is shown on first launch; you can change your choice under Profile &gt; Privacy options. You can reset your advertising ID in your device settings. No ads are shown while Premium or &quot;Remove Ads&quot; is active.</p>
+
+        <h2>6. Purchases and subscriptions</h2>
+        <p>Purchases are made through Google Play or the App Store; your card details never reach the app. To link a purchase to your account, our server verifies it with the Google Play Developer API or the App Store Server API. Cancellations and plan changes are made in Google Play or the App Store.</p>
+
+        <h2>7. Who we share your data with</h2>
+        <p>We do not sell your data or share it for marketing. We share it only with the following recipients, to the extent needed to run the service:</p>
         <ul>
-            <li>Push notification token and platform information</li>
-            <li>Crash reports: stack traces, device model and OS version</li>
-            <li>Last activity time, app version, platform and time zone (to improve the service and send notifications at a suitable time)</li>
-            <li>In-app event analytics (e.g. screen views, feature usage). <strong>Raw financial amounts are never sent to analytics</strong>; amounts are reported only as ranges (buckets).</li>
-            <li>Device/app integrity signals (Firebase App Check and Google Play Integrity)</li>
-            <li>Advertising identifier (Android Advertising ID) — only in free usage where ads are shown, see the "Advertising" section below</li>
+            <li>Google LLC / Google Cloud (processor): Firebase Authentication, Cloud Firestore, Cloud Storage, Cloud Functions, Cloud Messaging, App Check, Analytics for Firebase, Firebase Crashlytics — infrastructure, notifications, security, analytics and debugging.</li>
+            <li>Google (independent controller): AdMob, Play Billing, Play Developer API, Play Integrity, Sign in with Google — advertising, payments, verification and sign-in.</li>
+            <li>Apple Inc. (independent controller, iOS): App Store, StoreKit, App Store Server API, Sign in with Apple — payments, verification and sign-in.</li>
+            <li>Exchange-rate providers (exchangerate.host, frankfurter.app, open.er-api.com): only currency codes are sent; the providers technically see your device's IP address.</li>
+            <li>Competent public authorities and courts: the requested data, where legally required.</li>
         </ul>
+        <p>Processing for which Google and Apple are independent controllers is governed by their own privacy policies.</p>
 
-        <h2>Data Sources and Storage</h2>
+        <h2>8. International transfers</h2>
+        <p>Your data is processed on servers outside Türkiye: your account and financial data is stored in Google Cloud's Frankfurt (Germany) data center, server functions run in Belgium, and analytics, crash reporting, notification and advertising services use Google's global infrastructure, including the United States. These transfers are made to the providers above so that the service can be provided. You can write to us for information about the safeguards for these transfers. If you live in the EEA or the UK, transfers outside the EEA are made under Google's EU Standard Contractual Clauses and EU-US Data Privacy Framework commitments.</p>
+
+        <h2>9. Retention periods</h2>
         <ul>
-            <li><strong>Local storage:</strong> The app keeps only settings such as your session, language/theme preference and a subscription-status cache on the device. <strong>Your financial data is not stored on the device</strong> and the app does not work offline.</li>
-            <li><strong>Cloud storage:</strong> Account and app data are kept on Firebase (Google Cloud) — Authentication, Cloud Firestore, Cloud Storage and Cloud Functions.</li>
+            <li>Account, profile and financial records: as long as your account is open. Transactions, budgets, payments and similar records you delete are permanently deleted after 30 days. Account, category, plan, goal and debt definitions you delete are kept until your account is deleted, because your older records refer to them.</li>
+            <li>Profile photo: until you remove it or delete your account.</li>
+            <li>In-app notifications: 180 days.</li>
+            <li>Notification queue and app logs: up to 30 days.</li>
+            <li>Security logs: 180 days.</li>
+            <li>Server system logs: 30 days.</li>
+            <li>Crash reports (Firebase Crashlytics): 90 days.</li>
+            <li>Analytics data: 2 months.</li>
+            <li>Purchase verification record: as long as your account is open; after account deletion, 2 years, unlinked from your account.</li>
+            <li>Requests and support correspondence: 2 years after our reply.</li>
         </ul>
+        <p>We keep no backups; deleted data cannot be recovered. Data is deleted when its period expires.</p>
 
-        <h2>Purposes of Processing</h2>
+        <h2>10. Your rights and how to exercise them</h2>
+        <p>Under KVKK Art. 11 you have the right to:</p>
         <ul>
-            <li>Authentication and account management</li>
-            <li>Syncing and backing up your data across your devices</li>
-            <li>Payment reminders and status notifications (optional)</li>
-            <li>Analytics, debugging and performance improvement</li>
-            <li>Subscription and purchase verification</li>
-            <li>Serving ads (free usage only)</li>
-            <li>Security, abuse/fraud prevention and legal obligations</li>
+            <li>learn whether your personal data is processed and request information about it,</li>
+            <li>learn the purpose of processing and whether it is used accordingly,</li>
+            <li>know the third parties in Türkiye or abroad to whom it is transferred,</li>
+            <li>request correction if it is incomplete or inaccurate,</li>
+            <li>request erasure or destruction under KVKK Art. 7,</li>
+            <li>request that corrections and erasures be notified to the third parties it was transferred to,</li>
+            <li>object to a result against you arising solely from automated analysis,</li>
+            <li>claim compensation for damage caused by unlawful processing.</li>
         </ul>
+        <p>If you live in the EEA or the UK, you can also request restriction of processing, object to processing based on legitimate interest, receive your data in a structured, machine-readable format (portability) and withdraw your consent.</p>
+        <p>How to apply: write from the email address registered with Fingofy to <a href="mailto:umaycorporation@gmail.com">umaycorporation@gmail.com</a>, or in writing to the address above. We verify your identity through your registered email and resolve your request free of charge within 30 days at the latest. If you ask for a copy of your data, we send it in a machine-readable (JSON) format; with Premium you can also export your transactions in the app as CSV, Excel, PDF or Word.</p>
+        <p>If you are not satisfied with our reply, you can complain to the Turkish Personal Data Protection Board (KVKK Art. 14). If you live in the EEA or the UK, you also have the right to complain to the data protection authority of your country.</p>
 
-        <h2>Legal Bases</h2>
-        <ul>
-            <li>Performance of a contract (providing the service, subscriptions)</li>
-            <li>Legitimate interest (security, debugging, performance)</li>
-            <li>Consent (notifications and personalised advertising)</li>
-        </ul>
+        <h2>11. Account deletion</h2>
+        <p>You can delete your account instantly in the app under Profile &gt; Delete My Account. If you cannot access the app, send an email with the subject &quot;Account deletion request&quot; from your registered email address to <a href="mailto:umaycorporation@gmail.com">umaycorporation@gmail.com</a>; we will delete it within 30 days at the latest and let you know.</p>
+        <p>On deletion, your profile, all financial records, notifications, device tokens, security and app logs and profile photo are deleted immediately and permanently. Kept: the purchase verification record (unlinked from your account, 2 years); server logs and crash reports are deleted automatically when their periods expire.</p>
+        <p>Important: deleting your account does not cancel your store subscription; cancel it first in Google Play or the App Store. If you open a new Fingofy account with the same store account, you can move your purchases to it with &quot;Restore purchases&quot;; a purchase is linked to only one Fingofy account at a time.</p>
 
-        <h2>Advertising and Consent</h2>
-        <p>The free version shows ads through Google AdMob. To serve ads, your device's advertising identifier (Android Advertising ID) and limited technical data may be shared with Google and its advertising partners.</p>
-        <ul>
-            <li><strong>In the European Economic Area, the United Kingdom and Switzerland:</strong> the app shows Google's consent form (User Messaging Platform) on first launch. If you do not consent, no personalised ads are shown.</li>
-            <li>If you are in a consent region, you can review or change your consent at any time from <strong>Profile &gt; Privacy options</strong>.</li>
-            <li>You can reset your advertising ID or turn off personalisation in your device settings.</li>
-            <li><strong>No ads are shown while a Premium subscription or the "Remove Ads" purchase is active.</strong></li>
-        </ul>
-        <p>Google's advertising data practices: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a></p>
+        <h2>12. Security</h2>
+        <p>TLS encryption in transit; per-user access rules so that only you can access your data; protection against fake clients with Firebase App Check and Play Integrity; subscription benefits written only by the server. On Android, screenshots and screen recording are blocked inside the app. If a data breach occurs, we notify the Turkish Personal Data Protection Board and affected users as soon as possible under KVKK Art. 12(5).</p>
 
-        <h2>In-App Purchases and Subscriptions</h2>
-        <p>Fingofy offers optional purchases through Google Play Billing: a one-time "Remove Ads" purchase and a monthly/yearly <strong>Premium</strong> subscription.</p>
-        <ul>
-            <li>Payments are processed by Google; <strong>your card details never reach our app and are not stored by us</strong>.</li>
-            <li>An obfuscated account identifier is sent to Google so the purchase can be matched to your account.</li>
-            <li>Purchases are verified by a Cloud Function on our server through the Google Play Developer API; a verification record (product id, purchase time, status) is stored against your account.</li>
-            <li>Cancellation and plan changes are handled through Google Play and are subject to Google Play policies.</li>
-        </ul>
+        <h2>13. Age limit</h2>
+        <p>Fingofy is only for people aged 18 and over; you declare that you are over 18 when you sign up. If we learn that someone under 18 has created an account, we delete the account and its data.</p>
 
-        <h2>Third-Party Services</h2>
-        <ul>
-            <li>Firebase Authentication, Cloud Firestore, Cloud Storage, Cloud Functions, App Check (Google LLC) — account and app data infrastructure</li>
-            <li>Firebase Cloud Messaging (Google LLC) — push notifications</li>
-            <li>Google Analytics for Firebase (Google LLC) — usage analytics</li>
-            <li>Google AdMob (Google LLC) — advertising</li>
-            <li>Google Play Billing and Google Play Developer API (Google LLC) — purchases and verification</li>
-            <li>Google Play Integrity API (Google LLC) — device/app integrity checks</li>
-            <li>Google Sign-In (Google LLC) — optional sign-in method</li>
-            <li>Sentry (Functional Software, Inc.) — crash and error reporting</li>
-            <li>Exchange-rate providers (exchangerate.host, frankfurter.app, open.er-api.com) — used only to fetch current rates; <strong>no personal or financial data is sent</strong> in these requests, only currency codes</li>
-        </ul>
-        <p>These parties process data on our behalf or for their own determined purposes and are subject to their own privacy policies.</p>
-
-        <h2>International Data Transfers</h2>
-        <p>The service providers listed above may process data on servers outside your country, including outside the European Economic Area (for example in the United States). Such transfers take place under appropriate safeguards such as the providers' standard contractual clauses.</p>
-
-        <h2>Data Sharing</h2>
-        <p>We do not sell your data and do not transfer it to third parties for marketing. Sharing is limited to the service providers listed above, to the extent required for the service to function, and to cases of legal obligation or security.</p>
-
-        <h2>Security</h2>
-        <ul>
-            <li>HTTPS/TLS encryption in transit</li>
-            <li>Per-user access control through Firebase Security Rules (only you can access your data)</li>
-            <li>Protection against forged clients and abuse via Firebase App Check and Play Integrity</li>
-            <li>Subscription entitlements are written server-side only and cannot be modified by the client</li>
-            <li>Screenshot/recording blocking on financial screens</li>
-        </ul>
-
-        <h2>Retention Periods</h2>
-        <ul>
-            <li>Account data: until the account is deleted</li>
-            <li>App data: when deleted by the user, when the account is closed, or when the purpose of storage ends</li>
-            <li>Purchase verification records: for the duration of legal and accounting obligations</li>
-        </ul>
-
-        <h2>Your Rights</h2>
-        <ul>
-            <li>Access, rectification and erasure</li>
-            <li>Restriction of and objection to processing</li>
-            <li>Data portability (in-app export feature)</li>
-            <li>Withdrawal of consent (notification preferences and advertising consent)</li>
-        </ul>
-        <p>You can permanently delete your account and all of your data from within the app using <strong>Profile &gt; Delete My Account</strong>. For other requests you can contact us by email; we may need to verify your identity.</p>
-
-        <h2>Children's Privacy</h2>
-        <p>Our services are not directed to individuals under the age of 13 and we do not knowingly collect data from them. If we become aware of such data, it is deleted.</p>
-
-        <h2>Changes</h2>
-        <p>This policy may be updated. The "Last Updated" date appears above. We may announce significant changes with an in-app notification.</p>
-
-        <div class="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:umaycorporation@gmail.com">umaycorporation@gmail.com</a></p>
-        </div>
+        <h2>14. Changes, language and contact</h2>
+        <p>We may update this notice. We announce material changes in the app before they take effect; the current date is at the top. The Turkish version of this notice prevails; versions in other languages are for information.</p>
+        <p>Questions: <a href="mailto:umaycorporation@gmail.com">umaycorporation@gmail.com</a></p>
     </div>
 </body>
 </html>
