@@ -73,7 +73,7 @@
             <li>Satın alma: ürün, sipariş numarası, satın alma ve bitiş tarihi, durum. Kart bilgileriniz bize ulaşmaz.</li>
             <li>Cihaz ve güvenlik: bildirim belirteci, platform, uygulama sürümü, saat dilimi, son etkinlik zamanı, uygulama ve cihaz bütünlüğü sinyalleri (Firebase App Check, Google Play Integrity), IP adresi.</li>
             <li>Hata ve kullanım: çökme raporları (hata yığını, cihaz modeli, işletim sistemi) ve uygulama içi olaylar (ör. ekran görüntüleme, özellik kullanımı). Analitik olayları hesap kimliğinizle ilişkilendirilmez, Firebase'in cihaza özgü uygulama kimliğine bağlanır; tutarlar ham olarak değil yalnızca aralık olarak gönderilir.</li>
-            <li>Reklam (yalnız ücretsiz kullanımda): reklam kimliği, IP adresi, cihaz bilgisi.</li>
+            <li>Reklam (yalnız ücretsiz kullanımda): reklam kimliği, IP adresi ve bundan tahmin edilen yaklaşık konum, cihaz bilgisi, uygulama etkileşimleri, performans bilgileri.</li>
         </ul>
         <p>Özel nitelikli kişisel veri işlemiyoruz.</p>
 
@@ -96,7 +96,7 @@
         <p>Kullanım analitiğini Profil &gt; Kullanım analitiği satırından istediğiniz zaman kapatıp açabilirsiniz; kapalıyken cihazınızdan analitik verisi gönderilmez. AEA, Birleşik Krallık ve İsviçre'de analitik varsayılan olarak kapalıdır. Çökme raporları uygulamanın güvenilir çalışması için gereklidir ve meşru menfaate dayanır.</p>
 
         <h2>5. Reklamlar</h2>
-        <p>Ücretsiz sürümde Google AdMob üzerinden kişiselleştirilmemiş banner reklamlar gösterilir. Kişiselleştirilmemiş reklamlar da sıklık sınırı, toplu raporlama ve dolandırıcılık önleme için reklam kimliği ve IP adresi gibi verileri kullanabilir. AEA, Birleşik Krallık ve İsviçre'de ilk açılışta Google'ın onay formu gösterilir; tercihinizi Profil &gt; Gizlilik seçenekleri bölümünden değiştirebilirsiniz. Reklam kimliğinizi cihaz ayarlarından sıfırlayabilirsiniz. Premium abonelik veya &quot;Reklamları Kaldır&quot; etkinken reklam gösterilmez.</p>
+        <p>Ücretsiz sürümde Google AdMob üzerinden kişiselleştirilmemiş banner reklamlar gösterilir. Kişiselleştirilmemiş reklamlar da sıklık sınırı, toplu raporlama ve dolandırıcılık önleme için reklam kimliği ve IP adresi gibi verileri kullanabilir. IP adresinden cihazın yaklaşık konumu tahmin edilebilir; uygulama konum izni istemez. AEA, Birleşik Krallık ve İsviçre'de ilk açılışta Google'ın onay formu gösterilir; tercihinizi Profil &gt; Gizlilik seçenekleri bölümünden değiştirebilirsiniz. Reklam kimliğinizi cihaz ayarlarından sıfırlayabilirsiniz. Premium abonelik veya &quot;Reklamları Kaldır&quot; etkinken reklam gösterilmez.</p>
 
         <h2>6. Satın almalar ve abonelikler</h2>
         <p>Satın almalar Google Play veya App Store üzerinden yapılır; kart bilgileriniz uygulamaya ulaşmaz. Satın alma, hesabınıza bağlanması için sunucumuzda Google Play Developer API veya App Store Server API ile doğrulanır. İptal ve plan değişikliği Google Play veya App Store üzerinden yapılır.</p>
