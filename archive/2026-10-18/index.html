@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fingofy - Gizlilik Politikası</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #f8fafc;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #4F46E5;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h2 {
+            color: #1F2937;
+            font-size: 1.4em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #E5E7EB;
+            padding-bottom: 10px;
+        }
+        h3 {
+            color: #374151;
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p, li {
+            margin-bottom: 10px;
+            color: #4B5563;
+        }
+        ul { padding-left: 25px; }
+        .update-date { text-align: center; color: #6B7280; font-style: italic; margin-bottom: 30px; }
+        .contact { background: #EFF6FF; padding: 20px; border-radius: 8px; border-left: 4px solid #4F46E5; margin-top: 30px; }
+        .app-info { background: #F0FDF4; padding: 15px; border-radius: 8px; text-align: center; font-weight: 600; color: #059669; margin-bottom: 30px; }
+        .language-switch { text-align: center; margin-bottom: 20px; }
+        .language-switch a { color: #4F46E5; text-decoration: none; margin: 0 10px; }
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .container { padding: 20px; }
+            h1 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="background: #FEF3C7; color: #92400E; padding: 12px 15px; border-radius: 8px; text-align: center; margin-bottom: 20px;">Bu, 2026-10-18 tarihli metin sürümüdür. En son yayımlanan sürüm: <a href="../../index.html">Aydınlatma Metni</a></div>
+        <div class="language-switch">
+            <a href="index.html">Türkçe</a> | <a href="en.html">English</a>
+            &nbsp;·&nbsp;
+            <a href="../../account-deletion.html">Hesap Silme</a>
+        </div>
+
+        <h1>Fingofy - Gizlilik Politikası</h1>
+        <p class="update-date"><strong>Son Güncelleme: 18 Ekim 2026</strong></p>
+
+        <div class="app-info">
+            Fingofy çalışmak için etkin bir internet bağlantısı gerektirir. Finansal verileriniz cihazda saklanmaz; Firebase (Google Cloud) üzerinde tutulur.
+        </div>
+
+        <h2>Genel Bakış</h2>
+        <p>Fingofy; kullanıcıların ödeme planlarını, işlemlerini, bütçelerini, hedeflerini, borç/alacaklarını ve hesaplarını yönetmelerine yardımcı olur. Bu politika; hangi verileri topladığımızı, nasıl kullandığımızı, kimlerle paylaştığımızı ve haklarınızı açıklar.</p>
+        <p>Veri sorumlusu: <strong>Umay Corporation</strong> — umaycorporation@gmail.com</p>
+
+        <h2>Toplanan Veriler</h2>
+        <h3>Hesap ve Kimlik</h3>
+        <ul>
+            <li>E‑posta adresi (Firebase Authentication)</li>
+            <li>Ad/soyad, dil ve para birimi tercihi</li>
+            <li>Google ile giriş kullanırsanız: Google hesabınızdan gelen e‑posta, ad ve profil bilgisi</li>
+            <li>Yüklerseniz profil fotoğrafı (Firebase Storage)</li>
+        </ul>
+        <h3>Uygulama Verileri</h3>
+        <ul>
+            <li>Ödeme planları, işlemler, bütçeler, hedefler, borç/alacaklar, hesaplar ve kasa (vault) kayıtları</li>
+            <li>Ayarlar (tema, para birimi, bildirim tercihleri)</li>
+        </ul>
+        <h3>Cihaz ve Kullanım</h3>
+        <ul>
+            <li>Bildirim belirteci (push bildirimleri için) ve platform bilgisi</li>
+            <li>Çökme raporları: hata yığını, cihaz modeli ve işletim sistemi sürümü</li>
+            <li>Son etkinlik zamanı, uygulama sürümü, platform ve saat dilimi (hizmeti iyileştirmek ve bildirimleri uygun saatte göndermek için)</li>
+            <li>Uygulama içi olay analitiği (ör. ekran görüntüleme, özellik kullanımı). <strong>Ham finansal tutarlar analitiğe gönderilmez</strong>; tutarlar yalnızca aralık (kova) olarak iletilir.</li>
+            <li>Cihaz/uygulama bütünlüğü sinyalleri (Firebase App Check ve Google Play Integrity)</li>
+            <li>Reklam kimliği (Android Advertising ID) — yalnızca reklam gösterilen ücretsiz kullanımda, aşağıdaki "Reklamlar" bölümüne bakın</li>
+        </ul>
+
+        <h2>Veri Kaynakları ve Saklama</h2>
+        <ul>
+            <li><strong>Yerel saklama:</strong> Uygulama cihazda yalnızca oturum bilgisi, dil/tema tercihi ve abonelik durumu önbelleği gibi ayarları tutar. <strong>Finansal verileriniz cihazda saklanmaz</strong> ve uygulama çevrimdışı çalışmaz.</li>
+            <li><strong>Bulut saklama:</strong> Hesap ve uygulama verileri Firebase (Google Cloud) üzerinde tutulur — Authentication, Cloud Firestore, Cloud Storage ve Cloud Functions.</li>
+        </ul>
+
+        <h2>Veri İşleme Amaçları</h2>
+        <ul>
+            <li>Kimlik doğrulama ve hesap yönetimi</li>
+            <li>Verilerinizin cihazlarınız arasında senkronizasyonu ve yedeklenmesi</li>
+            <li>Ödeme hatırlatmaları ve durum bildirimleri (isteğe bağlı)</li>
+            <li>Analitik, hata ayıklama ve performans iyileştirme</li>
+            <li>Abonelik ve satın alma doğrulaması</li>
+            <li>Reklam gösterimi (yalnızca ücretsiz kullanımda)</li>
+            <li>Güvenlik, kötüye kullanım/dolandırıcılık önleme ve yasal yükümlülükler</li>
+        </ul>
+
+        <h2>Hukuki Dayanaklar</h2>
+        <ul>
+            <li>Sözleşmenin ifası (hizmetin sunulması, abonelik)</li>
+            <li>Meşru menfaat (güvenlik, hata ayıklama, performans)</li>
+            <li>Açık rıza (bildirimler ve kişiselleştirilmiş reklamlar)</li>
+        </ul>
+
+        <h2>Reklamlar ve Onay</h2>
+        <p>Ücretsiz sürümde Google AdMob üzerinden reklam gösterilir. Reklam gösterimi için cihazınızın reklam kimliği (Android Advertising ID) ve sınırlı teknik veriler Google ve reklam ortaklarıyla paylaşılabilir.</p>
+        <ul>
+            <li><strong>Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre'de:</strong> uygulama ilk açılışta Google'ın onay formunu (User Messaging Platform) gösterir. Onay vermezseniz kişiselleştirilmiş reklam gösterilmez.</li>
+            <li>Onay bölgesindeyseniz onayınızı <strong>Profil &gt; Gizlilik seçenekleri</strong> üzerinden istediğiniz zaman görüntüleyebilir veya değiştirebilirsiniz.</li>
+            <li>Cihaz ayarlarınızdan reklam kimliğinizi sıfırlayabilir veya kişiselleştirmeyi kapatabilirsiniz.</li>
+            <li><strong>Premium abonelik veya "Reklamları Kaldır" satın alımı aktifken reklam gösterilmez.</strong></li>
+        </ul>
+        <p>Google'ın reklam veri uygulamaları: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a></p>
+
+        <h2>Uygulama İçi Satın Almalar ve Abonelikler</h2>
+        <p>Fingofy, Google Play Billing üzerinden isteğe bağlı satın alma sunar: tek seferlik "Reklamları Kaldır" ve aylık/yıllık <strong>Premium</strong> aboneliği.</p>
+        <ul>
+            <li>Ödemeler Google tarafından işlenir; <strong>kart bilgileriniz uygulamamıza hiçbir zaman ulaşmaz ve tarafımızca saklanmaz</strong>.</li>
+            <li>Satın almayı hesabınızla eşleştirebilmek için Google'a takma (obfuscated) bir hesap kimliği gönderilir.</li>
+            <li>Satın alma, sunucumuzdaki bir Cloud Function tarafından Google Play Developer API üzerinden doğrulanır; doğrulama kaydı (ürün kimliği, satın alma zamanı, durum) hesabınızla ilişkili olarak saklanır.</li>
+            <li>Abonelik iptali ve plan değişikliği Google Play üzerinden yapılır ve Google Play politikalarına tabidir.</li>
+        </ul>
+
+        <h2>Üçüncü Taraf Hizmetleri</h2>
+        <ul>
+            <li>Firebase Authentication, Cloud Firestore, Cloud Storage, Cloud Functions, App Check (Google LLC) — hesap ve uygulama verisi altyapısı</li>
+            <li>Firebase Cloud Messaging (Google LLC) — push bildirimleri</li>
+            <li>Google Analytics for Firebase (Google LLC) — kullanım analitiği</li>
+            <li>Google AdMob (Google LLC) — reklam gösterimi</li>
+            <li>Google Play Billing ve Google Play Developer API (Google LLC) — satın alma ve doğrulama</li>
+            <li>Google Play Integrity API (Google LLC) — cihaz/uygulama bütünlüğü kontrolü</li>
+            <li>Google Sign-In (Google LLC) — isteğe bağlı giriş yöntemi</li>
+            <li>Firebase Crashlytics (Google LLC) — çökme ve hata raporlama</li>
+            <li>Döviz kuru sağlayıcıları (exchangerate.host, frankfurter.app, open.er-api.com) — yalnızca güncel kur bilgisi çekilir; bu isteklerde <strong>kişisel veya finansal veriniz gönderilmez</strong>, yalnızca para birimi kodları iletilir</li>
+        </ul>
+        <p>Bu taraflar verileri bizim adımıza ya da kendi belirledikleri amaçlarla işler ve kendi gizlilik politikalarına tabidir.</p>
+
+        <h2>Uluslararası Veri Aktarımı</h2>
+        <p>Yukarıdaki hizmet sağlayıcıları verileri Türkiye ve Avrupa Ekonomik Alanı dışındaki sunucularda (ör. Amerika Birleşik Devletleri) işleyebilir. Bu aktarımlar, sağlayıcıların standart sözleşme maddeleri gibi uygun güvenceleri kapsamında gerçekleşir.</p>
+
+        <h2>Veri Paylaşımı</h2>
+        <p>Verilerinizi satmıyor ve pazarlama amacıyla üçüncü taraflara aktarmıyoruz. Yalnızca yukarıda sayılan hizmet sağlayıcılarla, hizmetin çalışması için gereken ölçüde ve yasal zorunluluk veya güvenlik gerekçesiyle sınırlı paylaşım yapılır.</p>
+
+        <h2>Güvenlik</h2>
+        <ul>
+            <li>Aktarım sırasında HTTPS/TLS şifrelemesi</li>
+            <li>Firebase Güvenlik Kuralları ile kullanıcı bazlı erişim kontrolü (verilerinize yalnızca siz erişebilirsiniz)</li>
+            <li>Firebase App Check ve Play Integrity ile sahte istemci ve kötüye kullanım koruması</li>
+            <li>Abonelik hakları yalnızca sunucu tarafında yazılır; istemci tarafından değiştirilemez</li>
+            <li>Finansal ekranlarda ekran görüntüsü/kayıt engeli</li>
+        </ul>
+
+        <h2>Saklama Süreleri</h2>
+        <ul>
+            <li>Hesap verileri: Hesap silinene kadar</li>
+            <li>Uygulama verileri: Kullanıcı sildiğinde, hesap kapatıldığında veya saklama amacı ortadan kalktığında</li>
+            <li>Satın alma doğrulama kayıtları: Yasal ve muhasebesel yükümlülükler süresince</li>
+        </ul>
+
+        <h2>Kullanıcı Hakları</h2>
+        <ul>
+            <li>Erişim, düzeltme ve silme</li>
+            <li>İşlemeyi kısıtlama ve itiraz</li>
+            <li>Veri taşınabilirliği (uygulama içi dışa aktarma özelliği)</li>
+            <li>Rızayı geri çekme (bildirim tercihleri ve reklam onayı)</li>
+        </ul>
+        <p>Hesabınızı ve tüm verilerinizi uygulama içinden <strong>Profil &gt; Hesabımı Sil</strong> seçeneğiyle kalıcı olarak silebilirsiniz. Diğer talepleriniz için bize e‑posta ile ulaşabilirsiniz; kimliğinizi doğrulamamız gerekebilir.</p>
+
+        <h2>Çocukların Gizliliği</h2>
+        <p>Fingofy 18 yaş ve üzeri kişilere yöneliktir; kayıt sırasında 18 yaşından büyük olduğunuzu beyan edersiniz. 18 yaşından küçük birinin hesap oluşturduğunu öğrenirsek hesabı ve verilerini sileriz.</p>
+
+        <h2>Değişiklikler</h2>
+        <p>Bu politika güncellenebilir. "Son Güncelleme" tarihi yukarıda yer alır. Önemli değişiklikleri uygulama içi bildirimle duyurabiliriz.</p>
+
+        <div class="contact">
+            <h2>İletişim</h2>
+            <p>E‑posta: <a href="mailto:umaycorporation@gmail.com">umaycorporation@gmail.com</a></p>
+        </div>
+    </div>
+</body>
+</html>
